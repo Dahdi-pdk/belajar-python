@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Kedua</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Halaman Kedua</p>
+    <a href="/" target="_blank"><button>Kembali ke awal</button></a>
+    <form action="/halaman_kedua" method="post">
+        <input type="number" placeholder="masukkan tahun lahir" name="tahun_lahir">
+        <button type="submit">hitung usia</button>
+    </form>
+    {% if k is not none %}
+        <p> {{h}} {{k}} </p>
+    {% endif %}
+</body>
+</html>

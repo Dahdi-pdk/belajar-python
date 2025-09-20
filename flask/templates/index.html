@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            color: #3498db;
+        }
+        p {
+            color: #555;
+            font-size: 1.1em;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 24px 32px;
+            width: 220px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px rgba(52,152,219,0.15);
+        }
+        .card-title {
+            font-size: 1.2em;
+            color: #3498db;
+            margin-bottom: 12px;
+        }
+        .card-desc {
+            color: #666;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Home</h1>
+    <p>Selamat datang di halaman Home Flask Anda.</p>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-title">Card 1</div>
+            <div class="card-desc">Ini adalah deskripsi card pertama.</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Card 2</div>
+            <div class="card-desc">Ini adalah deskripsi card kedua.</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Card 3</div>
+            <div class="card-desc">Ini adalah deskripsi card ketiga.</div>
+        </div>
+    </div>
+    <a href="/about" class="card">Goto Next Page</a>
+</body>
+</html>

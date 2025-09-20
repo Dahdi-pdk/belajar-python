@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ini{
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        function kompile(){
+            fetch('/kompile').then(response => response.json()).then(data => {
+                alert(data.message);
+            }).catch(error => console.eror('Error :',error))
+        }
+    </script>
+</head>
+<body>
+    <div style="width: 100%;height : 100px;background-color:black;color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <h1>Welcome</h1>
+    </div>
+    <div class="ini">
+        <form action="/" method="post">
+            <input type="text" name="nomor" placeholder="baseng lah">
+            <input type="text" name="nama" placeholder="baseng lah">
+            <input type="text" name="alamat" placeholder="baseng lah">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    {% if nomor is not none %}
+       <p> {{nomor}} {{nama}} {{alamat}} </p>
+    {% endif %}
+    <button onclick="kompile()" type="">kompile sekarang</button>
+    
+</body>
+</html>
